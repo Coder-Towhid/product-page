@@ -1,22 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --font-family: "Roboto", serif;
+  --font-color: #364A63; 
+  --font-color-secondary:  #8091A7;
+  --accent-color:  #6576FF;
+
+
+}
+
+*{ 
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: var(--font-family);
+}
+
 section {
   padding: 120px 300px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 92px;
 }
+
 .product_container {
+  gap: 60px;
   height: 720px;
   display: flex;
+  padding-bottom: 92px;
+  align-items: center;
 }
+
 .product_gallery {
+  height: 100%;
   flex: 1;
 }
+
 .product_details {
   flex: 1;
 }
 
 img {
-    object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.product_title{
+  padding: 12px 0;
+}
+
+.product_title h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #364A63;
+  
+}
+
+.product_rating{
+  display: flex;
+  gap: 8px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+
+.reviews_count{
+  font-weight: 400;
+  color: var(--font-color-secondary);
+  font-size: 14px;
+  line-height: 23.1px;
+}
+
+.reviews_count::before {
+  content: "(";
+}
+
+.reviews_count::after {
+  content: ")";
+}
+
+
+
+.product_price{
+  display: flex;
+  padding-top: 20px;
+  gap: 5px;
+}
+
+.product_price  .old_price{
+  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--font-color-secondary);
+}
+
+.product_price .offer_price{
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+.product_details{
+  padding-top: 20px;
+  padding-right: 4px;
+}
+
+.product_details p{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--font-color-secondary);
+}
+
+.product_type_number{
+  display: flex;
+  padding-top: 20px;
+  padding-right: 4px;
+  gap: 43px;
+}
+.product_type_number span{
+  display: block;
+}
+.product_type_number .sub_title{
+  font-weight: 400;
+  size: 14px;
+  line-height: 23.1px;
+  color: var(--font-color-secondary);
+}
+.product_type_number .value{
+  font-weight: 700;
+  size: 16px;
+  line-height: 23px;
+
+}
+
+.checkout_container{
+  position: sticky;
+  bottom: 0;
 }
